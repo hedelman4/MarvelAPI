@@ -34,6 +34,16 @@ class Character(db.Model):
       'name': self.name
       }
 
+  def insert(self):
+    db.session.add(self)
+    db.session.commit()
+
+  def delete(self):
+    db.session.delete(self)
+    db.session.commit()
+
+  def update(self):
+    db.session.commit()
 '''
 Marvel Movie
 '''
@@ -53,3 +63,14 @@ class Movie(db.Model):
       'name': self.name,
       'character_id': self.character_id
       }
+
+  def insert(self):
+    db.session.add(self)
+    db.session.commit()
+
+  def delete(self):
+    db.session.delete(self)
+    db.session.commit()
+
+  def update(self):
+    db.session.commit()

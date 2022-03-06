@@ -27,7 +27,7 @@ def create_app(test_config=None):
         movies = Movie.query.all()
         return jsonify({
         'success': True,
-        'movies': dict((movie.id, movie.name, movie.character_id) for movie in movies)
+        'movies': dict((movie.id, movie.name) for movie in movies)
         })
 
     @app.route('/test')

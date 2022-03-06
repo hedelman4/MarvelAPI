@@ -42,13 +42,14 @@ class Movie(db.Model):
 
   id = Column(db.Integer, primary_key=True)
   name = Column(String)
-  character_id = db.Column(db.Integer, db.ForeignKey('character.id'))
+  character_id = Column(db.Integer, db.ForeignKey('character.id'))
 
-  def __init__(self, name):
+  def __init__(self, name, character_id):
     self.name = name
 
   def format(self):
     return {
       'id': self.id,
       'name': self.name,
+      'character_id': self.character_id
       }

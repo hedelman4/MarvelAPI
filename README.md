@@ -50,6 +50,7 @@ A creator token is provided in the setup.sh filter
 ### GET '/characters'
 - Fetches a dictionary of characters in which the keys are the ids and the value is the corresponding string of the character
 - Request Arguments: None
+
 '''
 {
     "characters": {
@@ -74,6 +75,7 @@ A creator token is provided in the setup.sh filter
 ### GET '/movies'
 - Fetches a dictionary of movies in which the keys are the ids and the value is the corresponding string of the movie
 - Request Arguments: None
+
 '''
 {
     "movies": {
@@ -108,16 +110,19 @@ A creator token is provided in the setup.sh filter
 ### POST '/movies'
 - Adds a new movie to the movie lists
 - Request Body Arguments: name - string; character_id - integer
+
 '''
 {
 'success': True,
 'movie': new_movie.name
 }
+'''
 
 ### PATCH '/movies/$(id)'
 - Updates existing movies
 - Request Arguments: id - integer
 - Request Body Arguments: name - string; character_id - integer
+
 '''
 {
 'success': True,
@@ -129,6 +134,7 @@ A creator token is provided in the setup.sh filter
 ### DELETE '/movies/$(id)'
 - Deletes existing movies
 - Request Arguments: id - integer
+
 '''
 {
 'success': True,

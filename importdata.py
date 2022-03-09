@@ -17,6 +17,7 @@ db.session.add(Character(name='Black Widow'))
 db.session.add(Character(name='Doctor Strange'))
 db.session.add(Character(name='Black Panther'))
 db.session.add(Character(name='Spider-Man'))
+db.session.add(Character(name='Hawkeye'))
 
 #Add Movies
 db.session.add(Movie(name='Captain America: The First Avenger', character_id=1))

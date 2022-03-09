@@ -4,10 +4,11 @@ from flask import request, _request_ctx_stack
 from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
+import config
 
-AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
-ALGORITHMS = os.environ.get('ALGORITHMS')
-API_AUDIENCE = os.environ.get('API_AUDIENCE')
+AUTH0_DOMAIN = config.AUTH0_DOMAIN
+ALGORITHMS = config.ALGORITHMS
+API_AUDIENCE = config.API_AUDIENCE
 
 class AuthError(Exception):
     def __init__(self, error, status_code):
